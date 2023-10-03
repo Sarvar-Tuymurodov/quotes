@@ -55,6 +55,10 @@ const isEditing = () => {
         align-items: center
         justify-content: space-between
 
+        +screen(576)
+            flex-direction: column
+            gap: 10px
+
     &__brand
         +mulBold
         font-size: 20px
@@ -63,6 +67,9 @@ const isEditing = () => {
         display: flex
         align-items: center
         gap: 25px
+
+        +screen(576)
+            gap: 10px
 
         &--item 
             font-size: 18px
@@ -74,10 +81,20 @@ const isEditing = () => {
             &:hover
                 color: $color-black
 
+            +screen(576)
+                font-size: 16px
+
         .router-link-active
             color: $color-black
 
+    &__actions
+        +screen(576)
+            width: 100%
+
     &__search
+        +screen(576)
+            width: 100%
+
         input 
             padding: 8px 10px
             border-radius: 10px
@@ -87,4 +104,7 @@ const isEditing = () => {
 
             &::placeholder
                 font-size: 14px
+
+            +screen(576)
+                width: 100%
 </style>

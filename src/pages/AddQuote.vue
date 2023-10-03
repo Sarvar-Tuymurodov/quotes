@@ -112,14 +112,24 @@ onMounted(()=>{
 .quote-add
     padding: 60px 0
 
+    +screen(991)
+        padding: 40px 0
+
     &__content
         display: flex
         gap: 20px
+
+        +screen(991)
+            flex-direction: column
         
 
     &__title
         font-size: 32px
         margin-bottom: 35px
+
+        +screen(991)
+            font-size: 28px
+            margin-bottom: 25px
 
     &__form
         display: flex
@@ -127,6 +137,14 @@ onMounted(()=>{
         width: 100%
         flex-direction: column
         min-width: 500px
+
+        +screen(1200)
+            min-width: 320px
+
+        +screen(991)
+            max-width: 100%
+            width: 100%
+            margin-bottom: 30px
 
     &__body
         display: flex
@@ -143,11 +161,18 @@ onMounted(()=>{
         width: 100%
         margin-bottom: 40px
 
+        +screen(576)
+            grid-template-columns: repeat(1,1fr)
+
     &__left,
     &__right
         display: flex
         flex-direction: column
         gap: 20px
+
+    &__left 
+        +screen(576)
+            order: 2
 
     &__card
         display: flex
@@ -157,6 +182,9 @@ onMounted(()=>{
         border: 2px solid $color-silver
         min-width: 500px
         max-width: 100%
+
+        +screen(1200)
+            min-width: 350px
 
         &--top 
             display: flex
@@ -178,6 +206,9 @@ onMounted(()=>{
             font-size: 24px
             margin-bottom: 25px
             line-height: 1.4
+
+            +screen(576)
+                font-size: 18px
 
         &--date 
             align-self: flex-end

@@ -50,6 +50,9 @@ watch(() => store.state.filteredQuotes, function() {
 .quotes
     padding: 60px 0
 
+    +screen(576)
+        padding: 40px 0
+
     &__content
         display: flex
         flex-direction: column
@@ -60,10 +63,22 @@ watch(() => store.state.filteredQuotes, function() {
         color: $color-black
         margin-bottom: 40px
 
+        +screen(768)
+            font-size: 34px
+
     &__list 
         display: grid
         grid-template-columns: repeat(3,1fr)
         grid-gap: 25px
+
+        +screen(991)
+            grid-template-columns: repeat(2,1fr)
+
+        +screen(768)
+            grid-gap: 25px 15px
+
+        +screen(576)
+            grid-template-columns: repeat(1,1fr)
 
     &__item
         display: flex
@@ -94,10 +109,16 @@ watch(() => store.state.filteredQuotes, function() {
             margin-bottom: 25px
             line-height: 1.4
 
+            +screen(576)
+                font-size: 16px
+
         &--dates
             margin-top: auto
             display: flex
             flex-direction: column
+
+            +screen(576)
+                font-size: 15px
 
         &--created 
             align-self: flex-end
